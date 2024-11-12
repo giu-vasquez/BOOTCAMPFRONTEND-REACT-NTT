@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html { 
+    font-size: 62.5%;
+}
+body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+
+}
+.titulo {
+    text-align: left;
+}
+
+header {
+    background-color: #eb9148;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+header .logo{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+header nav {
+    background-color: #f1b57c;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+header nav ul li{
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration:double; 
+    font-weight: bold;
+}
+
+img {
+    height: 30rem;
+}
+.img-1{
+    height: 15rem;
+}
+.img-2 {
+    height: 15rem;
+}
+.img-3{
+    height: 15rem;
+}
+
+
+@media (min-width: 768px) {
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        width: 100%;
+    }
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+}
+
+.buscador-1{
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buscador-1:hover{
+    background-color: #444;
+}
+
+.buscador-2{
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.buscador-2:hover{
+    background-color: #444;
+}
+
+
+#productos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.producto {
+    display: inline-block;
+    width: 100%;
+    max-width: 30%;
+    margin: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(8, 8, 8, 0.1);
+    text-align: left;
+}
+
+
+.producto img {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.producto button {
+    padding: 10px 15px;
+    background-color: #d8ac4e;
+    color: white;
+    border: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #444;
+}
+.h1 {
+    font-weight: bold;
+}
+#productos .btn-large{
+    padding: 10px 130px; 
+    font-size: 15px;
+    background-color: rgb(151, 74, 23);
+}
+#productos .btn-large:hover{
+    background-color: #9c9696;
+}
+
+#ofertas {
+    background-color: #f8f8f8b9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.oferta {
+    background-color: #ffdf7f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contacto {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contacto form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#contacto form input, #contacto form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #0b0c0c;
+}
+
+#contacto form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contacto form button:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #ec7f40;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+}
+
