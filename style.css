@@ -10,6 +10,8 @@ body {
     font-size: 16px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+
+    /* consideremos usar variables para los colores o tamaños */
     background-color: #f4f4f4;
 
 }
@@ -18,6 +20,7 @@ body {
 }
 
 header {
+    /* consideremos usar variables para los colores o tamaños */
     background-color: #eb9148;
     color: #fff;
     padding: 10px 0;
@@ -31,6 +34,7 @@ header .logo{
 }
 
 header nav {
+    /* consideremos usar variables para los colores o tamaños */
     background-color: #f1b57c;
     padding: 15px;
     border-radius: 8px;
@@ -42,6 +46,7 @@ header nav ul li{
 }
 
 header nav ul li a {
+    /* consideremos usar variables para los colores o tamaños */
     color: #ffffff;
     text-decoration:double; 
     font-weight: bold;
@@ -94,6 +99,7 @@ img {
     margin-right: 20px;
 }
 
+/* evitemos usar numeros, en caso estemos diviendo podriamos considerar -first, -second, -third, etc */
 .buscador-1:hover{
     background-color: #444;
 }
@@ -153,6 +159,8 @@ img {
 .h1 {
     font-weight: bold;
 }
+
+/* hay que mantener un estandar en el idioma, generalmente en los desarrollos se aplica el inglés, no quiere decir que sea obligatorio pero si es confluso ver 2 idiomas mezclados */
 #productos .btn-large{
     padding: 10px 130px; 
     font-size: 15px;
