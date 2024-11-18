@@ -20,49 +20,33 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-        </header>
 
+            <div class="cart-icon">
+                <div id="cart-info">
+                    <span>🛒 Carrito:</span>
+                    <ul id="carrito-lista"></ul>
+                    <h3>Total: S/. <span id="total-precio">0.00</span></h3>
+                </div>
+            </div> 
+            
+        </header>
+        <!-- Buscador y filtrado-->
         <section class="buscador">
             <input class="buscador-1" type="text" placeholder="Buscar productos...">
+            <button class="buscador-3" onclick="filterName()">Buscar</button>
             <select class="buscador-2" name="select"> 
                 <option value="value1">Todas las categorías</option>
-                <option value="value2" >Vegetales</option>
-                <option value="value3">Carnes rojas</option>
-                <option value="value4">Lácteos</option>
               </select>
+            </div>
         </section>
         
-        <section id="productos">
-            <h2>Productos</h2>
-            <div class="producto">
-                <img src="../freelancer_inicio/imagenes/brocoli.png" alt="Producto 1">
-                <h2>Brocoli</h2>
-                <p>Venta de producto por pesaje</p>
-                <h4>Categoría</h4>
-                <button>Vegetales</button>
-                <h1>Precio: S/. 2.99</h1>
-                <button class="btn-large">Añadir al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="../freelancer_inicio/imagenes/carne.jpg" alt="Producto 2">
-                <h2>Lomo Fino</h2>
-                <p>Venta del producto por kilo</p>
-                <h4>Categoría</h4>
-                <button>Carnes Rojas</button>
-                <h1>Precio: S/. 28.99</h1>
-                <button class="btn-large">Añadir al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="../freelancer_inicio/imagenes/leche 1lt.jpg" alt="Producto 3">
-                <h2>Leche entera</h2>
-                <p>Venta de producto por unidad</p>
-                <h4>Categoría</h4>
-                <button>Lácteos</button>
-                <h1>Precio: S/. 9.99</h1>
-                <button class="btn-large">Añadir al carrito</button>
-            </div>
+        <!--Productos-->
+        <h2 class="title">Productos</h2>
+        <section class="products" id="productos">
+            
         </section>
 
+        <!--anuncios-->
         <section id="ofertas">
             <h2>Ofertas Especiales</h2>
             <div class="oferta">
@@ -71,6 +55,7 @@
             </div>
         </section>
 
+        <!--Contacto-->
         <section id="contacto">
             <h2>Contacto</h2>
             <p>¿Tienes preguntas o dudas? Contáctanos:</p>
@@ -88,6 +73,8 @@
             </form>
         </section>
     
+        <!--footer-->
+        
         <footer class="final-pagina">
             <h5>Siguenos en nuestras redes sociales</h5>
             <p class="redes-sociales">
@@ -99,5 +86,6 @@
             <h5>&copy; 2024 My Market. Todos los derechos reservados</h5>
             <h5>Política de la privacidad | Término de uso | Contacto</h5>
         </footer>
+        <script src="script.js"></script>
     </body> 
 </html>
