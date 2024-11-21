@@ -1,3 +1,6 @@
+// hay que separarlo en varios archivos para hacer reutilizable parte de la l'ogica y que pueda tambi'en tener responsabilidad 'unica cada funci'on.
+
+
 // URLs de las APIs de productos y categorías
 const API_PRODUCTS = 'https://dummyjson.com/products';
 const API_CATEGORIES = 'https://dummyjson.com/products/categories';
@@ -5,10 +8,13 @@ const API_CATEGORIES = 'https://dummyjson.com/products/categories';
 
 // Función para cargar las categorías al buscador 2 desde la API
 
+// podr'ia estar en una carpeta services/categories.service.js
 async function loadCategories() {
     try {
         const response = await fetch(API_CATEGORIES);
         const categories = await response.json();
+
+        // separemos la logica de la interface de las llamadas al servicio, esto deber'ia estar en otra funci'on que lea la repsuesta del servicio
         const categorySelect = document.querySelector('.buscador-2');
         categorySelect.insertAdjacentHTML = '<option value="">Todas las categorías</option>'; 
             categories.forEach(category => {
@@ -33,6 +39,7 @@ async function loadProducts(searchTerm = '', category = '') {
     const data = await response.json();
     let products = data.products;
 
+    // igual aqu'i esto debe estar separado
     // Filtrar productos según el término de búsqueda
     if (searchTerm) {
         searchTerm = searchTerm.toLowerCase();
@@ -68,6 +75,7 @@ function displayProducts(products) {
 
 //Botón que filtra por nombre
 function filterName() {
+    // variables en ingles y clases en spanish mantener uniforme el idiome
     const searchTerm = document.querySelector('.buscador-1').value;
     const selectedCategory = document.querySelector('.buscador-2').value;
     loadProducts(searchTerm, selectedCategory);
@@ -92,6 +100,7 @@ function displayProducts(products) {
         const productDiv = document.createElement('div');
         productDiv.classList.add('producto');
 
+        // este mismo c'odigo se repite 2 veces
         productDiv.innerHTML = `
             <img src="${product.thumbnail}" alt="${product.title}">
             <h2>${product.title}</h2>
