@@ -22,6 +22,7 @@ const Home: React.FC = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
+                // esto debe estar en otro archivo ya que de lo contrario se le esta dando m'as resposnabilidades al home de las que deber'ia tener
                 const response = await fetch('https://dummyjson.com/products');
                 const data = await response.json();
                 setProducts(data.products);
@@ -37,6 +38,7 @@ const Home: React.FC = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
+                // lo mismo aqu'i
                 const response = await fetch('https://dummyjson.com/products/categories');
                 const data = await response.json();
                 setCategories(data);
@@ -58,6 +60,7 @@ const Home: React.FC = () => {
     const handleFilterByCategory = async () => {
         if (selectedCategory) {
             try {
+                // igual aqu'i
                 const response = await fetch(`https://dummyjson.com/products/category/${selectedCategory}`);
                 const data = await response.json();
                 setProducts(data.products);
@@ -65,6 +68,7 @@ const Home: React.FC = () => {
                 console.error('Error filtering by category:', error);
             }
         } else {
+            // igual aqu'i
             const response = await fetch('https://dummyjson.com/products');
             const data = await response.json();
             setProducts(data.products);
@@ -82,6 +86,7 @@ const Home: React.FC = () => {
     const handleClearFilters = async () => {
         setSearchTerm('');
         setSelectedCategory('');
+        // igual aqu'i
         const response = await fetch('https://dummyjson.com/products');
         const data = await response.json();
         setProducts(data.products);
