@@ -3,6 +3,7 @@ import './contact.css';
 
 
 function ContactForm() {
+    // falta tipar para que solo permita los key necesarios
     const [formData, setFormData] = useState({
         nombre: '',
         correo: '',

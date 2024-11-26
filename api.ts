@@ -12,6 +12,7 @@ export const fetchProducts = async (category: string = '', searchTerm: string = 
     if (!response.ok) throw new Error('Error fetching products');
     const data = await response.json();
 
+    // esta logica la debe tener el consumidor no el servicio
     if (searchTerm) {
         const searchTermLower = searchTerm.toLowerCase();
         return data.products.filter((product: any) =>
